@@ -1,0 +1,4 @@
+﻿  MarioProject.cpp
+C:\Users\M014785l\Downloads\MarioProject\MarioProject\MarioProject.cpp(89): warning C4715: 'InitSDL': not all control paths return a value
+C:\Users\M014785l\Downloads\MarioProject\MarioProject\MarioProject.cpp(172): warning C4715: 'LoadTextFromFile': not all control paths return a value
+  MarioProject.vcxproj -> C:\Users\M014785l\Downloads\MarioProject\Debug\MarioProject.exe
