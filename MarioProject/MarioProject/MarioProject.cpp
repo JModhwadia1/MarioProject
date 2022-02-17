@@ -3,15 +3,24 @@
 #include <SDL_image.h>
 #include<SDL_mixer.h>
 #include "constant.h"
+#include "Texture2D.h"
+#include "Commons.h"
 using namespace std;
 
 //Globals
 SDL_Window* g_window = nullptr;
+SDL_Renderer* g_renderer = nullptr;
+Texture2D* g_texture = nullptr;
 
 //Function prototypes
 bool InitSDL();
 bool CLoseSDL();
 bool Update();
+void Render();
+
+
+
+
 
 
 int main(int argc, char* args[])
@@ -22,11 +31,12 @@ int main(int argc, char* args[])
 		bool quit = false;
 		while (!quit)
 		{
+			Render();
 			quit = Update();
 		}
 	}
 	CLoseSDL();
-	Update();
+	
 	return 0;
 	
 	
@@ -51,6 +61,28 @@ bool InitSDL()
 			SCREEN_WIDTH,
 			SCREEN_HEIGHT,
 			SDL_WINDOW_SHOWN);
+		g_renderer = SDL_CreateRenderer(g_window, -1, SDL_RENDERER_ACCELERATED);
+		if (g_renderer != nullptr)
+		{
+			//init PNG loading
+			int imageFlags = IMG_INIT_PNG;
+			if(!(IMG_Init(imageFlags)& imageFlags))
+			{
+				cout << "SDL Image could not initialise. Error:" << IMG_GetError();
+				return false;
+			}
+			//Load the background texture
+			g_texture = new Texture2D(g_renderer);
+			if(!g_texture->LoadFromFile("Images/test.bmp"))
+			{
+				return false;
+			}
+		}
+		else
+		{
+			cout << "Renderer could not initialise. Error: " << SDL_GetError();
+			return false;
+		}
 		if (g_window == nullptr)
 		{
 			//window failed
@@ -69,6 +101,14 @@ bool CLoseSDL()
 	IMG_Quit();
 	SDL_Quit();
 	return true;
+
+	//release the texture
+	delete g_texture;
+	g_texture = nullptr;
+
+	//destroy renderer
+	SDL_DestroyRenderer(g_renderer);
+	g_renderer = nullptr;
 }
 bool Update()
 {
@@ -96,7 +136,18 @@ bool Update()
 	}
 	return false;
 }
-	
+void Render()
+{
+	//Clear the screen
+	SDL_SetRenderDrawColor(g_renderer, 0xFF, 0xFF, 0xFF, 0xFF);
+	SDL_RenderClear(g_renderer);
+
+	g_texture->Render(Vector2D(), SDL_FLIP_NONE);
+
+	//update the screen
+	SDL_RenderPresent(g_renderer);
+
+}
 
 
 
