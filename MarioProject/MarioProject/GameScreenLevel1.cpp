@@ -8,6 +8,7 @@
 GameScreenLevel1::GameScreenLevel1(SDL_Renderer* renderer) : GameScreen(renderer)
 {
 	SetUpLevel();
+	m_level_map = nullptr;
 }
 GameScreenLevel1::~GameScreenLevel1()
 {
@@ -23,15 +24,15 @@ void GameScreenLevel1::Update(float deltaTime, SDL_Event e)
 	mario->Update(deltaTime, e);
 	luigi->Update(deltaTime, e);
 
-	////collisions
-	//if (Collisions::Instance()->Circle(mario, luigi))
-	//{
-	//	cout << "Circle hit!" << endl;
-	//}
-	if (Collisions::Instance()->Box(mario->GetCollisionBox(), luigi->GetCollisionBox()))
+	//collisions
+	if (Collisions::Instance()->Circle(mario, luigi))
+	{
+		cout << "Circle hit!" << endl;
+	}
+	/*if (Collisions::Instance()->Box(mario->GetCollisionBox(), luigi->GetCollisionBox()))
 	{
 		cout << "Box hit" << endl;
-	}
+	}*/
 
 };
 void GameScreenLevel1::Render()
@@ -51,8 +52,34 @@ bool GameScreenLevel1::SetUpLevel()
 		std::cout << "Failed to load background texture!" << std::endl;
 		return false;
 	}
+	SetLevelMap();
 
 	//set up player character
-	mario =  new CharacterMario(m_renderer, "Images/Mario.png", Vector2D(64,330));
-	luigi = new CharacterLuigi(m_renderer, "Images/Luigi.png", Vector2D(128, 330));
+	mario =  new CharacterMario(m_renderer, "Images/Mario.png", Vector2D(64,330), m_level_map);
+	luigi = new CharacterLuigi(m_renderer, "Images/Luigi.png", Vector2D(128, 330), m_level_map);
+}
+
+void GameScreenLevel1::SetLevelMap()
+{
+	int map[MAP_HEIGHT][MAP_WIDTH] = { { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 },
+									{ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 },
+									{ 1,1,1,1,1,1,0,0,0,0,1,1,1,1,1,1 },
+									{ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 },
+									{ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 },
+									{ 0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0 },
+									{ 1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1 },
+									{ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 },
+									{ 0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0 },
+									{ 1,1,1,1,1,1,0,0,0,0,1,1,1,1,1,1 },
+									{ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 },
+									{ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 },
+									{ 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 } };
+	//clear any old maps
+	if (m_level_map != nullptr)
+	{
+		delete m_level_map;
+	}
+	//set the new one
+	m_level_map = new LevelMap(map);
+
 }

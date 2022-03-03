@@ -4,6 +4,7 @@
 #include <iostream>
 #include "Commons.h"
 #include "Texture2D.h"
+#include "LevelMap.h"
 
 using namespace std;
 
@@ -28,13 +29,13 @@ protected:
 	virtual void MoveRight(float deltaTime);
 	virtual void AddGravity(float deltaTime);
 	virtual void Jump();
-
+private:
 	FACING m_facing_direction;
-
+	LevelMap* m_current_level_map;
 	//Texture2D* m_background_texture;
 	//bool SetUpLevel();
 public:
-	Character(SDL_Renderer* renderer, string imagePath, Vector2D start_position);
+	Character(SDL_Renderer* renderer, string imagePath, Vector2D start_position, LevelMap* map);
 	~Character();
 
 	virtual void Render();

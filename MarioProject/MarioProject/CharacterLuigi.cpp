@@ -1,6 +1,6 @@
 #include "CharacterLuigi.h"
 
-CharacterLuigi::CharacterLuigi(SDL_Renderer* renderer, string imagePath, Vector2D start_position) :Character(renderer, imagePath, start_position)
+CharacterLuigi::CharacterLuigi(SDL_Renderer* renderer, string imagePath, Vector2D start_position, LevelMap* map):Character(renderer, imagePath, start_position, map)
 {
 	m_texture = new Texture2D(m_renderer);
 	if (!m_texture->LoadFromFile(imagePath))

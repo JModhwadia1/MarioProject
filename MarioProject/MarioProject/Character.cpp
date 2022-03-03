@@ -1,13 +1,13 @@
 #include "Character.h"
 #include "constant.h"
 
-Character::Character(SDL_Renderer* renderer, string imagePath, Vector2D start_position)
+Character::Character(SDL_Renderer* renderer, string imagePath, Vector2D start_position, LevelMap* map)
 {
 	m_renderer = renderer;
 	m_position = start_position;
-	
 	m_moving_left = false;
 	m_moving_right = false;
+	m_current_level_map = map;
 
 	//load texture
 	m_texture = new Texture2D(m_renderer);
@@ -55,7 +55,6 @@ void Character::Update(float deltaTime, SDL_Event e)
 			m_jumping = false;
 
 	}
-	AddGravity(deltaTime);
 
 	if (m_moving_left)
 	{
@@ -65,6 +64,21 @@ void Character::Update(float deltaTime, SDL_Event e)
 	else if (m_moving_right)
 	{
 		MoveRight(deltaTime);
+	}
+
+	//collision position variables
+	int centralX_position = (int)(m_position.x + (m_texture->GetWidth() * 0.5)) / TILE_WIDTH;
+	int foot_position = (int)(m_position.y + m_texture->GetHeight()) / TILE_HEIGHT;
+
+	// deal with gravity
+	if (m_current_level_map->GetTileAt(foot_position, centralX_position) == 0)
+	{
+		AddGravity(deltaTime);
+	}
+	else
+	{
+		//collided with ground so we can jump again
+		m_can_jump = true;
 	}
 
 }
