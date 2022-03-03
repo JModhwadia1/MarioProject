@@ -1,2 +1,9 @@
-﻿  CharacterLuigi.cpp
-  MarioProject.vcxproj -> C:\Users\m014785l\Downloads\MarioProject\Debug\MarioProject.exe
+﻿  Collisions.cpp
+C:\Users\m014785l\Documents\GitHub\MarioProject\MarioProject\MarioProject\Character.h(47,114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\m014785l\Documents\GitHub\MarioProject\MarioProject\MarioProject\Character.h(47,90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  GameScreenLevel1.cpp
+C:\Users\m014785l\Documents\GitHub\MarioProject\MarioProject\MarioProject\Character.h(47,114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\m014785l\Documents\GitHub\MarioProject\MarioProject\MarioProject\Character.h(47,90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Generating Code...
+C:\Users\m014785l\Documents\GitHub\MarioProject\MarioProject\MarioProject\GameScreenLevel1.cpp(58): warning C4715: 'GameScreenLevel1::SetUpLevel': not all control paths return a value
+  MarioProject.vcxproj -> C:\Users\m014785l\Documents\GitHub\MarioProject\MarioProject\Debug\MarioProject.exe

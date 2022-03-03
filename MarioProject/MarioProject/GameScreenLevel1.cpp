@@ -3,7 +3,7 @@
 #include <iostream>
 #include "CharacterMario.h"
 #include "CharacterLuigi.h"
-
+#include "Collisions.h"
 
 GameScreenLevel1::GameScreenLevel1(SDL_Renderer* renderer) : GameScreen(renderer)
 {
@@ -22,6 +22,17 @@ void GameScreenLevel1::Update(float deltaTime, SDL_Event e)
 	//update character
 	mario->Update(deltaTime, e);
 	luigi->Update(deltaTime, e);
+
+	////collisions
+	//if (Collisions::Instance()->Circle(mario, luigi))
+	//{
+	//	cout << "Circle hit!" << endl;
+	//}
+	if (Collisions::Instance()->Box(mario->GetCollisionBox(), luigi->GetCollisionBox()))
+	{
+		cout << "Box hit" << endl;
+	}
+
 };
 void GameScreenLevel1::Render()
 {
