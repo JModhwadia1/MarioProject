@@ -1,3 +1,2 @@
-﻿  MarioProject.cpp
-C:\Users\jayes\Documents\University\Games Engine Creation\Semester 2\MarioProject\MarioProject\MarioProject.cpp(54): warning C4715: 'InitSDL': not all control paths return a value
-  MarioProject.vcxproj -> C:\Users\jayes\Documents\University\Games Engine Creation\Semester 2\MarioProject\Debug\MarioProject.exe
+﻿  CharacterLuigi.cpp
+  MarioProject.vcxproj -> C:\Users\m014785l\Downloads\MarioProject\Debug\MarioProject.exe
