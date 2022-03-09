@@ -14,3 +14,5 @@
 #define TILE_HEIGHT 32
 //SCREEN SHAKE
 #define SHAKE_DURATION 0.25f
+//Koopa 
+#define INJURED_TIME 2.5f 

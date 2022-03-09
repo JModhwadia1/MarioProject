@@ -22,6 +22,8 @@ GameScreenLevel1::~GameScreenLevel1()
 	delete m_pow_block;
 	m_pow_block = nullptr;
 
+	m_enemies.clear();
+
 	m_background_texture = nullptr;
 }
 void GameScreenLevel1::Update(float deltaTime, SDL_Event e) 
@@ -58,16 +60,24 @@ void GameScreenLevel1::Update(float deltaTime, SDL_Event e)
 		cout << "Box hit" << endl;
 	}
 	UpdatePOWBLOCK();
+	UpdateEnemies(deltaTime, e);
 
 }
 
 void GameScreenLevel1::Render()
 {
+
+	//draw the enemies
+	for (int i = 0; i < m_enemies.size(); i++)
+	{
+		m_enemies[i]->Render();
+	}
 	//draw the background
 	m_background_texture->Render(Vector2D(0, m_background_yPos), SDL_FLIP_NONE);
 	mario->Render();
 	luigi->Render();
 	m_pow_block->Render();
+	
 }
 bool GameScreenLevel1::SetUpLevel()
 {
@@ -135,4 +145,22 @@ void GameScreenLevel1::DoScreenShake()
 	m_shake_time = SHAKE_DURATION;
 	m_wobble = 0.0f;
 
+}
+
+void GameScreenLevel1::UpdateEnemies(float deltaTime, SDL_Event e)
+{
+	if (!m_enemies.empty())
+	{
+		int enemyIndexToDelete = -1;
+		for (unsigned int i = 0; i < m_enemies.size(); i++)
+		{
+			//check if the enemy is on the bottom row of tiles
+			if (m_enemies[i]->GetPosition().y > 300.0f)
+			{
+				//is the enemy off screen to left / right
+				if (m_enemies[i]->GetPosition().x < (float)(-m_enemies[i]->GetCollisionBox().width * 0.5f) || m_enemies[i]->GetPosition().x > SCREEN_WIDTH - (float)(m_enemies[i]->GetCollisionBox().width * 0.55f))
+					m_enemies[i]->SetAlive(false);
+			}
+		}
+	}
 }

@@ -32,12 +32,17 @@ void PowBlock::Render()
 	{ 
 		return;
 	}
+	//get the portion of the sheet we want to draw
 	int left = m_single_sprite_w * (m_num_hits_left - 1);
-	SDL_Rect portionOfSpriteSheet = { left, 0, m_single_sprite_w, m_single_sprite_h };
-	SDL_Rect destRect = { (int)(m_position.x), (int)(m_position.y), m_single_sprite_w, m_single_sprite_h };
-	m_texture->Render(portionOfSpriteSheet, destRect, SDL_FLIP_NONE);
-}
 
+	//xPos, yPos, sprite sheet widht, sprite sheet height
+	SDL_Rect portionOfSpriteSheet = { left, 0, m_single_sprite_w, m_single_sprite_h };
+
+	//determine where to draw it
+	SDL_Rect destRect = {static_cast <int>(m_position.x), static_cast <int>(m_position.y), m_single_sprite_w, m_single_sprite_h };
+	//draw the sprite
+	m_texture->Render(portionOfSpriteSheet, destRect, SDL_FLIP_NONE);
+}	
 void PowBlock::TakeHit()
 {
 	m_num_hits_left--;

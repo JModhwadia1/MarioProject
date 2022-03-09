@@ -21,6 +21,8 @@ protected:
 	bool m_jumping;
 	bool m_can_jump;
 	float m_jump_force;
+	bool m_alive;
+	FACING m_facing_direction;
 
 	//collision variables
 	float m_collision_radius;
@@ -30,7 +32,6 @@ protected:
 	virtual void AddGravity(float deltaTime);
 	virtual void Jump();
 private:
-	FACING m_facing_direction;
 	LevelMap* m_current_level_map;
 	//Texture2D* m_background_texture;
 	//bool SetUpLevel();
@@ -44,6 +45,12 @@ public:
 	Vector2D GetPosition();
 	bool IsJumping() { return m_jumping;  }
 	void CancelJump();
+
+	bool GetAlive() { return m_alive; }
+	bool SetAlive(bool isAlive)
+	{
+		m_alive = isAlive;
+	}
 
 	//collision functions
 	float GetCollisionRadius();

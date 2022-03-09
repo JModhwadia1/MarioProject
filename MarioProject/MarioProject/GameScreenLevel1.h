@@ -4,11 +4,14 @@
 #include "Commons.h"
 #include "Texture2D.h"
 #include "LevelMap.h"
+#include <Vector>
+
 
 
 class Texture2D;
 class CharacterMario;
 class CharacterLuigi;
+class CharacterKoopa;
 class PowBlock;
 
 class GameScreenLevel1 : GameScreen
@@ -28,6 +31,12 @@ private:
 	float m_wobble;
 	float m_background_yPos;
 	void DoScreenShake();
+	
+	//Enemy
+	vector<CharacterKoopa*> m_enemies;
+	
+	void UpdateEnemies(float deltaTime, SDL_Event e);
+	void CreateKoopa(Vector2D position, FACING direction, float speed);
 	
 		
 public:
