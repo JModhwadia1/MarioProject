@@ -17,6 +17,7 @@ class Texture2D
 		bool LoadFromFile(std::string path);
 		void Free();
 		void Render(Vector2D new_postion, SDL_RendererFlip flip, double angle = 0.0);
+		void Render(SDL_Rect src_rect, SDL_Rect src_dest, SDL_RendererFlip flip, double angle = 0.0);
 
 		int GetWidth();
 		int GetHeight();

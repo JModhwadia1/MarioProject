@@ -1,29 +1,41 @@
 ﻿  Character.cpp
-C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Character.h(48,114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Character.h(48,90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Character.h(50,114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Character.h(50,90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   CharacterLuigi.cpp
-C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Character.h(48,114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Character.h(48,90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Character.h(50,114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Character.h(50,90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   CharacterMario.cpp
-C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Character.h(48,114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Character.h(48,90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Character.h(50,114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Character.h(50,90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   Collisions.cpp
-C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Character.h(48,114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Character.h(48,90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Character.h(50,114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Character.h(50,90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   GameScreen.cpp
   GameScreenLevel1.cpp
-C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Character.h(48,114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Character.h(48,90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Character.h(50,114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Character.h(50,90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   GameScreenManager.cpp
   LevelMap.cpp
   MarioProject.cpp
+  PowBlock.cpp
+C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\PowBlock.cpp(16,44): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\PowBlock.cpp(17,42): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\PowBlock.cpp(35,11): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\PowBlock.cpp(36,45): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\PowBlock.cpp(36,45): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\PowBlock.cpp(36,64): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\PowBlock.cpp(36,64): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\PowBlock.cpp(37,66): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\PowBlock.cpp(37,66): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\PowBlock.cpp(37,85): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\PowBlock.cpp(37,85): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
   Texture2D.cpp
 C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Texture2D.cpp(32,41): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
 C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Texture2D.cpp(32,41): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
 C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Texture2D.cpp(32,55): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
 C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Texture2D.cpp(32,55): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
   Generating Code...
-C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Texture2D.cpp(71): warning C4715: 'Texture2D::LoadFromFile': not all control paths return a value
+C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Texture2D.cpp(76): warning C4715: 'Texture2D::LoadFromFile': not all control paths return a value
 C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\MarioProject.cpp(94): warning C4715: 'InitSDL': not all control paths return a value
-C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\GameScreenLevel1.cpp(60): warning C4715: 'GameScreenLevel1::SetUpLevel': not all control paths return a value
+C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\GameScreenLevel1.cpp(91): warning C4715: 'GameScreenLevel1::SetUpLevel': not all control paths return a value
   MarioProject.vcxproj -> C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\Debug\MarioProject.exe

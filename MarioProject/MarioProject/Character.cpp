@@ -132,6 +132,10 @@ void Character::AddGravity(float deltaTime)
 		m_can_jump = true;
 	}
 }
+void Character::CancelJump()
+{
+	m_jumping = false;
+}
 	
 
 

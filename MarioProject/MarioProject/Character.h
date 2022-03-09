@@ -42,6 +42,8 @@ public:
 	virtual void Update(float deltaTime, SDL_Event e);
 	void SetPosition(Vector2D new_position);
 	Vector2D GetPosition();
+	bool IsJumping() { return m_jumping;  }
+	void CancelJump();
 
 	//collision functions
 	float GetCollisionRadius();
