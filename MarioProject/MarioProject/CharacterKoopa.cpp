@@ -1,11 +1,13 @@
 #include "CharacterKoopa.h"
 
-CharacterKoopa::CharacterKoopa(SDL_Renderer* renderer, string imagePath, Vector2D start_position, LevelMap* map, FACING start_facing, float speed) : Character(renderer, imagePath, start_position, map)
+CharacterKoopa::CharacterKoopa(SDL_Renderer* renderer, string imagePath, Vector2D start_position, LevelMap* map, FACING start_facing, float movementSpeed) : Character(renderer, imagePath, start_position, map)
 {
 	m_facing_direction = start_facing;
 	m_position = start_position;
+	m_movement_speed = movementSpeed;
+
 	m_injured = false;
-	speed = KOOPA_SPEED;
+	isAlive = true;
 
 	m_single_sprite_w = m_texture->GetWidth() / 2;
 	m_single_sprite_h = m_texture->GetHeight();
@@ -54,7 +56,7 @@ void CharacterKoopa::Render()
 	SDL_Rect destRect = { (int)(m_position.x), (int)(m_position.y), m_single_sprite_w, m_single_sprite_h };
 
 	//THEN DRAW IT FACING THE CORRECT DIRECTION
-	{
+	
 		if (m_facing_direction == FACING_RIGHT)
 		{
 			m_texture->Render(portionOfSprite, destRect, SDL_FLIP_NONE);
@@ -64,7 +66,7 @@ void CharacterKoopa::Render()
 			m_texture->Render(portionOfSprite, destRect, SDL_FLIP_HORIZONTAL);
 		}
 
-	}
+	
 }
 
 void CharacterKoopa::Update(float deltaTime, SDL_Event e)
@@ -102,7 +104,7 @@ void CharacterKoopa::Update(float deltaTime, SDL_Event e)
 	}
 }
 
-bool CharacterKoopa::GetInjured() { return m_injured; }
+
 
 
 void CharacterKoopa::FlipRightwayUp()

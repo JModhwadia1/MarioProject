@@ -70,17 +70,17 @@ void GameScreenLevel1::Update(float deltaTime, SDL_Event e)
 void GameScreenLevel1::Render()
 {
 
-	//draw the enemies
-	for (int i = 0; i < m_enemies.size(); i++)
-	{
-		m_enemies[i]->Render();
-	}
 	//draw the background
 	m_background_texture->Render(Vector2D(0, m_background_yPos), SDL_FLIP_NONE);
 	mario->Render();
 	luigi->Render();
 	m_pow_block->Render();
 	
+	//draw the enemies
+	for (int i = 0; i < m_enemies.size(); i++)
+	{
+		m_enemies[i]->Render();
+	}
 }
 bool GameScreenLevel1::SetUpLevel()
 {
@@ -104,6 +104,8 @@ bool GameScreenLevel1::SetUpLevel()
 	m_pow_block = new PowBlock(m_renderer, m_level_map);
 	m_screenshake = false;
 	m_background_yPos = 0.0f;
+
+	return true;
 
 }
 
@@ -186,7 +188,7 @@ void GameScreenLevel1::UpdateEnemies(float deltaTime, SDL_Event e)
 			{
 				if (Collisions::Instance()->Circle(m_enemies[i], mario))
 				{
-					if (m_enemies[i]->GetInjured())
+					if (m_enemies[i]->GetIsInjured())
 					{
 						m_enemies[i]->SetAlive(false);
 					}

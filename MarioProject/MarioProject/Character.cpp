@@ -8,7 +8,7 @@ Character::Character(SDL_Renderer* renderer, string imagePath, Vector2D start_po
 	m_moving_left = false;
 	m_moving_right = false;
 	m_current_level_map = map;
-	m_alive = true;
+	
 	//load texture
 	m_texture = new Texture2D(m_renderer);
 	if (!m_texture->LoadFromFile(imagePath))

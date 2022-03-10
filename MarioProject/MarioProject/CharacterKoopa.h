@@ -8,20 +8,26 @@
 class CharacterKoopa : public Character
 {
 public:
-	CharacterKoopa(SDL_Renderer* renderer, string imagePath, Vector2D start_position, LevelMap* map, FACING start_facing, float speed);
+	CharacterKoopa(SDL_Renderer* renderer, string imagePath, Vector2D start_position, LevelMap* map, FACING start_facing, float movementSpeed);
 	~CharacterKoopa();
 	void TakeDamage();
 	void Jump();
 	void Render()override;
 
+	bool GetAlive() { return isAlive; }
+	void SetAlive(bool alive) { isAlive = false; }
+
 	void Update(float deltaTime, SDL_Event e)override;
-	bool GetInjured();
+	bool GetIsInjured() { return m_injured;};
 private:
 	float m_single_sprite_w;
 	float m_single_sprite_h;
 
 	bool m_injured;
 	bool m_injured_time;
+
+	float m_movement_speed;
+	bool isAlive;
 
 	void FlipRightwayUp();
 };
