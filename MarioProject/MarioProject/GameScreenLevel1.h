@@ -1,10 +1,13 @@
 #ifndef _GAMESCREENLEVEL1_H
 #define _GAMESCREENLEVEL1_H
+
 #include "GameScreen.h"
 #include "Commons.h"
 #include "Texture2D.h"
 #include "LevelMap.h"
-#include <Vector>
+#include <vector>
+
+using namespace std;
 
 
 
@@ -19,6 +22,8 @@ class GameScreenLevel1 : GameScreen
 private:
 	CharacterMario* mario;
 	CharacterLuigi* luigi;
+
+
 	Texture2D* m_background_texture;
 	LevelMap* m_level_map;
 	PowBlock* m_pow_block;
@@ -31,7 +36,7 @@ private:
 	float m_wobble;
 	float m_background_yPos;
 	void DoScreenShake();
-	
+
 	//Enemy
 	vector<CharacterKoopa*> m_enemies;
 	

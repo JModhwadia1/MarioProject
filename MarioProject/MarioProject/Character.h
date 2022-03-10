@@ -50,6 +50,7 @@ public:
 	bool SetAlive(bool isAlive)
 	{
 		m_alive = isAlive;
+		return isAlive;
 	}
 
 	//collision functions

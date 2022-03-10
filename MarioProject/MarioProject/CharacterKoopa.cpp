@@ -1,13 +1,20 @@
 #include "CharacterKoopa.h"
 
-CharacterKoopa::CharacterKoopa(SDL_Renderer* renderer, string imagePath, Vector2D start_position, LevelMap* map, FACING start_facing) : Character(renderer, imagePath, start_position, map,)
+CharacterKoopa::CharacterKoopa(SDL_Renderer* renderer, string imagePath, Vector2D start_position, LevelMap* map, FACING start_facing, float speed) : Character(renderer, imagePath, start_position, map)
 {
 	m_facing_direction = start_facing;
 	m_position = start_position;
 	m_injured = false;
+	speed = KOOPA_SPEED;
 
 	m_single_sprite_w = m_texture->GetWidth() / 2;
 	m_single_sprite_h = m_texture->GetHeight();
+
+	m_texture = new Texture2D(m_renderer);
+	if (!m_texture->LoadFromFile(imagePath))
+	{
+		std::cout << "Failed to load character texture!" << std::endl;
+	}
 
 }
 
