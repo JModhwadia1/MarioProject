@@ -102,6 +102,7 @@ void CharacterKoopa::Update(float deltaTime, SDL_Event e)
 			FlipRightwayUp();
 		}
 	}
+	
 }
 
 

@@ -12,8 +12,9 @@
 
 GameScreenLevel1::GameScreenLevel1(SDL_Renderer* renderer) : GameScreen(renderer)
 {
-	SetUpLevel();
 	m_level_map = nullptr;
+	spawnTimer = 0.0f;
+	SetUpLevel();
 }
 GameScreenLevel1::~GameScreenLevel1()
 {
@@ -87,7 +88,7 @@ bool GameScreenLevel1::SetUpLevel()
 	
 	//load texture
 	m_background_texture = new Texture2D(m_renderer);
-	if (!m_background_texture->LoadFromFile("Images/test.bmp"))
+	if (!m_background_texture->LoadFromFile("Images/BackgroundMB.png"))
 	{
 		std::cout << "Failed to load background texture!" << std::endl;
 		return false;
@@ -97,6 +98,8 @@ bool GameScreenLevel1::SetUpLevel()
 	//set up koopa 
 	CreateKoopa(Vector2D(150, 32), FACING_RIGHT, KOOPA_SPEED);
 	CreateKoopa(Vector2D(325, 32), FACING_LEFT, KOOPA_SPEED);
+
+
 
 	//set up player character
 	mario =  new CharacterMario(m_renderer, "Images/Mario.png", Vector2D(64,330), m_level_map);
@@ -164,6 +167,15 @@ void GameScreenLevel1::DoScreenShake()
 
 void GameScreenLevel1::UpdateEnemies(float deltaTime, SDL_Event e)
 {
+	spawnTimer += deltaTime;
+
+
+	if (spawnTimer >= 7.0f)
+	{
+		spawnTimer = 0.0f;
+
+		CreateKoopa(Vector2D(150, 32), FACING_RIGHT, KOOPA_SPEED);
+	}
 	if (!m_enemies.empty())
 	{
 		int enemyIndexToDelete = -1;
@@ -194,6 +206,7 @@ void GameScreenLevel1::UpdateEnemies(float deltaTime, SDL_Event e)
 					}
 					else
 					{
+
 						//kill mario
 					}
 				}
@@ -209,11 +222,12 @@ void GameScreenLevel1::UpdateEnemies(float deltaTime, SDL_Event e)
 		{
 			m_enemies.erase(m_enemies.begin() + enemyIndexToDelete);
 		}
+		
 	}
 }
 
 void GameScreenLevel1::CreateKoopa(Vector2D position, FACING direction, float speed)
 {
-	CharacterKoopa* koopa = new CharacterKoopa (m_renderer, "Images/Koopa.png", position, m_level_map,direction, speed);
+	CharacterKoopa* koopa = new CharacterKoopa (m_renderer, "Images/Koopa.png", position, m_level_map, direction, speed);
 	m_enemies.push_back(koopa);
 }
