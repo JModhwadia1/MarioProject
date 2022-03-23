@@ -1,38 +1,6 @@
-﻿  Character.cpp
+﻿  GameScreenLevel1.cpp
 C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Character.h(53,114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Character.h(53,90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  CharacterKoopa.cpp
-C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Character.h(53,114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Character.h(53,90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\CharacterKoopa.cpp(12,44): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\CharacterKoopa.cpp(13,42): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\CharacterKoopa.cpp(26,17): warning C4552: '-': result of expression not used
-C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\CharacterKoopa.cpp(44,11): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\CharacterKoopa.cpp(49,10): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\CharacterKoopa.cpp(53,37): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\CharacterKoopa.cpp(53,37): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\CharacterKoopa.cpp(53,56): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\CharacterKoopa.cpp(53,56): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\CharacterKoopa.cpp(56,66): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\CharacterKoopa.cpp(56,66): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\CharacterKoopa.cpp(56,85): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\CharacterKoopa.cpp(56,85): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\CharacterKoopa.cpp(98,3): warning C4804: '-=': unsafe use of type 'bool' in operation
-C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\CharacterKoopa.cpp(100,7): warning C4804: '<=': unsafe use of type 'bool' in operation
-  CharacterLuigi.cpp
-C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Character.h(53,114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Character.h(53,90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  CharacterMario.cpp
-C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Character.h(53,114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Character.h(53,90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  Collisions.cpp
-C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Character.h(53,114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Character.h(53,90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  GameScreenLevel1.cpp
-C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Character.h(53,114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Character.h(53,90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\GameScreenLevel1.cpp(80,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\GameScreenLevel1.cpp(158,20): warning C4018: '<': signed/unsigned mismatch
-  GameScreenManager.cpp
-  Generating Code...
+C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\GameScreenLevel1.cpp(89,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\GameScreenLevel1.cpp(167,20): warning C4018: '<': signed/unsigned mismatch
   MarioProject.vcxproj -> C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\Debug\MarioProject.exe

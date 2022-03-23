@@ -1,0 +1,1 @@
+#include "CharacterCoin.h"

@@ -13,7 +13,9 @@
 GameScreenLevel1::GameScreenLevel1(SDL_Renderer* renderer) : GameScreen(renderer)
 {
 	SetUpLevel();
-	m_level_map = nullptr;
+	//m_level_map = nullptr;
+	enemyToSpawnCountdown = KOOPA_SPAWN_DELAY;
+	
 }
 GameScreenLevel1::~GameScreenLevel1()
 {
@@ -47,6 +49,13 @@ void GameScreenLevel1::Update(float deltaTime, SDL_Event e)
 			m_background_yPos = 0.0f;
 		}
 
+	}
+	enemyToSpawnCountdown -= deltaTime;
+	if (enemyToSpawnCountdown <= 0)
+	{
+		CreateKoopa(Vector2D(150, 32), FACING_RIGHT, KOOPA_SPEED);
+		CreateKoopa(Vector2D(325, 32), FACING_LEFT, KOOPA_SPEED);
+		enemyToSpawnCountdown = KOOPA_SPAWN_DELAY;
 	}
 
 	//update character
@@ -87,7 +96,7 @@ bool GameScreenLevel1::SetUpLevel()
 	
 	//load texture
 	m_background_texture = new Texture2D(m_renderer);
-	if (!m_background_texture->LoadFromFile("Images/test.bmp"))
+	if (!m_background_texture->LoadFromFile("Images/BackgroundMB.png"))
 	{
 		std::cout << "Failed to load background texture!" << std::endl;
 		return false;
