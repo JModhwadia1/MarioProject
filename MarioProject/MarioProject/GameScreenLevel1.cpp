@@ -106,6 +106,9 @@ bool GameScreenLevel1::SetUpLevel()
 	//set up koopa 
 	CreateKoopa(Vector2D(150, 32), FACING_RIGHT, KOOPA_SPEED);
 	CreateKoopa(Vector2D(325, 32), FACING_LEFT, KOOPA_SPEED);
+	//set up coins
+	CreateCoins(Vector2D(150, 32), COIN_SPEED);
+	CreateCoins(Vector2D(325, 32), COIN_SPEED);
 
 	//set up player character
 	mario =  new CharacterMario(m_renderer, "Images/Mario.png", Vector2D(64,330), m_level_map);
@@ -225,4 +228,10 @@ void GameScreenLevel1::CreateKoopa(Vector2D position, FACING direction, float sp
 {
 	CharacterKoopa* koopa = new CharacterKoopa (m_renderer, "Images/Koopa.png", position, m_level_map,direction, speed);
 	m_enemies.push_back(koopa);
+}
+
+void GameScreenLevel1::CreateCoins(Vector2D position, float speed)
+{
+	CharacterCoin* coins = new CharacterCoin(m_renderer, "Images/Coin.png", position, m_level_map, speed);
+	m_coins.push_back(coins);
 }

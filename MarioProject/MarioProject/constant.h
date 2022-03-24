@@ -20,3 +20,4 @@
 #define KOOPA_SPAWN_DELAY 9.0f
 //coins
 #define ANIMATION_DELAY 0.10f
+#define COIN_SPEED 95.0f

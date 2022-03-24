@@ -6,6 +6,7 @@
 #include "Texture2D.h"
 #include "LevelMap.h"
 #include <vector>
+#include "CharacterCoin.h"
 
 using namespace std;
 
@@ -39,10 +40,12 @@ private:
 
 	//Enemy
 	vector<CharacterKoopa*> m_enemies;
+	vector<CharacterCoin*> m_coins;
 	float enemyToSpawnCountdown = 0;
 	
 	void UpdateEnemies(float deltaTime, SDL_Event e);
 	void CreateKoopa(Vector2D position, FACING direction, float speed);
+	void CreateCoins(Vector2D position, float speed);
 	
 		
 public:
