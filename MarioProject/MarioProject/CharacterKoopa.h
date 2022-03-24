@@ -30,6 +30,7 @@ private:
 	bool isAlive;
 
 	void FlipRightwayUp();
+	void ChangeDirection();
 };
 
 #endif // !_CharacterKoopa_H

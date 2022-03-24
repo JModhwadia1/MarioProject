@@ -78,6 +78,11 @@ void GameScreenLevel1::Update(float deltaTime, SDL_Event e)
 
 void GameScreenLevel1::Render()
 {
+	//draw the enemies
+	for (int i = 0; i < m_enemies.size(); i++)
+	{
+		m_enemies[i]->Render();
+	}
 
 	//draw the background
 	m_background_texture->Render(Vector2D(0, m_background_yPos), SDL_FLIP_NONE);
@@ -85,11 +90,6 @@ void GameScreenLevel1::Render()
 	luigi->Render();
 	m_pow_block->Render();
 	
-	//draw the enemies
-	for (int i = 0; i < m_enemies.size(); i++)
-	{
-		m_enemies[i]->Render();
-	}
 }
 bool GameScreenLevel1::SetUpLevel()
 {

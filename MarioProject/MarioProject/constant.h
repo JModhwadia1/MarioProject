@@ -18,3 +18,5 @@
 #define INJURED_TIME 2.5f 
 #define KOOPA_SPEED 96.0f
 #define KOOPA_SPAWN_DELAY 9.0f
+//coins
+#define ANIMATION_DELAY 0.10f

@@ -102,9 +102,11 @@ void CharacterKoopa::Update(float deltaTime, SDL_Event e)
 			FlipRightwayUp();
 		}
 	}
-	if (m_position.x > SCREEN_WIDTH)
+	cout << m_facing_direction << endl;
+
+	if (m_position.x + m_single_sprite_w > SCREEN_WIDTH   || m_position.x < 0)
 	{
-		
+		ChangeDirection();
 	}
 	
 }
@@ -117,4 +119,20 @@ void CharacterKoopa::FlipRightwayUp()
 	m_facing_direction = (m_facing_direction == FACING_RIGHT ? FACING_LEFT : FACING_RIGHT);
 	m_injured = false;
 	Jump();
+}
+
+void CharacterKoopa::ChangeDirection()
+{
+	if (m_facing_direction == FACING_LEFT)
+	{
+		m_facing_direction = FACING_RIGHT;
+		m_moving_right = true;
+		m_moving_left = false;
+	}
+	else if (m_facing_direction == FACING_RIGHT)
+	{
+		m_facing_direction = FACING_LEFT;
+		m_moving_left = true;
+		m_moving_right = false;
+	}
 }
