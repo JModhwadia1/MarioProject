@@ -73,6 +73,7 @@ void GameScreenLevel1::Update(float deltaTime, SDL_Event e)
 	}
 	UpdatePOWBLOCK();
 	UpdateEnemies(deltaTime, e);
+	UpdateCoins(deltaTime, e);
 
 }
 
@@ -82,6 +83,11 @@ void GameScreenLevel1::Render()
 	for (int i = 0; i < m_enemies.size(); i++)
 	{
 		m_enemies[i]->Render();
+	}
+
+	for (int i = 0; i < m_coins.size(); i++)
+	{
+		m_coins[i]->Render();
 	}
 
 	//draw the background
@@ -119,6 +125,7 @@ bool GameScreenLevel1::SetUpLevel()
 
 	return true;
 
+	
 }
 
 void GameScreenLevel1::SetLevelMap()
@@ -234,4 +241,12 @@ void GameScreenLevel1::CreateCoins(Vector2D position, float speed)
 {
 	CharacterCoin* coins = new CharacterCoin(m_renderer, "Images/Coin.png", position, m_level_map, speed);
 	m_coins.push_back(coins);
+}
+
+void GameScreenLevel1::UpdateCoins(float deltaTime, SDL_Event e)
+{
+	for (unsigned int i = 0; i < m_coins.size(); i++)
+	{
+		m_coins[i]->Update(deltaTime, e);
+	}
 }
