@@ -18,6 +18,14 @@ class CharacterLuigi;
 class CharacterKoopa;
 class PowBlock;
 
+struct Tile
+{
+	Texture2D* tex;
+	Rect2D* pos;
+	Rect2D* spriteSheetPos;
+	bool flip;
+};
+
 class GameScreenLevel1 : GameScreen
 {
 private:
@@ -47,6 +55,7 @@ private:
 	void CreateKoopa(Vector2D position, FACING direction, float speed);
 	void CreateCoins(Vector2D position, float speed);
 	void UpdateCoins(float deltaTime, SDL_Event e);
+	Tile tile[MAP_HEIGHT][MAP_WIDTH];
 		
 public:
 	GameScreenLevel1(SDL_Renderer* renderer);

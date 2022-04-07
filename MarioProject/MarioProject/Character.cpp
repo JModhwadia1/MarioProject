@@ -81,6 +81,7 @@ void Character::Update(float deltaTime, SDL_Event e)
 		//collided with ground so we can jump again
 		m_can_jump = true;
 	}
+
 	if (m_current_level_map->GetTileAt(head_position, centralX_position) == 1)
 	{
 		m_jumping = false;

@@ -138,11 +138,13 @@ void GameScreenLevel1::SetLevelMap()
 									{ 0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0 },
 									{ 1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1 },
 									{ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 },
-									{ 0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0 },
+									{ 0,0,0,0,0,0,0,2,2,0,0,0,0,0,0,0 },
 									{ 1,1,1,1,1,1,0,0,0,0,1,1,1,1,1,1 },
 									{ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 },
 									{ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 },
 									{ 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 } };
+
+	
 	//clear any old maps
 	if (m_level_map != nullptr)
 	{
@@ -150,6 +152,29 @@ void GameScreenLevel1::SetLevelMap()
 	}
 	//set the new one
 	m_level_map = new LevelMap(map);
+	for (int i = 0; i < MAP_HEIGHT; i++)
+	{
+		for (int j = 0; j < MAP_WIDTH; j++)
+		{
+			
+		}
+
+	}
+	switch (map[MAP_HEIGHT][MAP_WIDTH])
+	{
+	case 0:
+		//Tile::tex = new Texture2D::LoadFromFile("Images/Spritesheet.png")
+		Tile texture;
+		texture.tex =  new Texture2D->LoadFromFile("Images/Spritesheet.png");
+		texture.pos;
+		texture.spriteSheetPos;
+		
+		
+
+		
+	default:
+		break;
+	}
 
 }
 void GameScreenLevel1::UpdatePOWBLOCK()
