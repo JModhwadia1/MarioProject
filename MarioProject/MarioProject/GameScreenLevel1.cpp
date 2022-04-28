@@ -166,19 +166,19 @@ void GameScreenLevel1::SetLevelMap()
 
 			switch (map[i][j])
 			{
-			case 0:
-				//Tile::tex = new Texture2D::LoadFromFile("Images/Spritesheet.png")
-				Tile texture;
-				texture.tex = mapSprites;
-				texture.pos = new Rect2D(i * TILE_WIDTH, j * TILE_HEIGHT, TILE_WIDTH, TILE_HEIGHT)
-				texture.spriteSheetPos;
-				break;
 			case 1:
 				//Tile::tex = new Texture2D::LoadFromFile("Images/Spritesheet.png")
-				Tile texture;
-				texture.tex = mapSprites;
-				texture.pos;
-					texture.spriteSheetPos;
+				Tile floor;
+				floor.tex = mapSprites;
+				floor.pos = new Rect2D(i * TILE_WIDTH, j * TILE_HEIGHT, TILE_WIDTH, TILE_HEIGHT);
+				floor.spriteSheetPos = new Rect2D( 16, 296,TILE_WIDTH,TILE_HEIGHT );
+				break;
+			case 2:
+				//Tile::tex = new Texture2D::LoadFromFile("Images/Spritesheet.png")
+				Tile powBlock;
+				powBlock.tex = mapSprites;
+				powBlock.pos = new Rect2D(i * TILE_WIDTH, j * TILE_WIDTH, TILE_WIDTH, TILE_HEIGHT);
+				powBlock.spriteSheetPos = new Rect2D()
 				break;
 		
 

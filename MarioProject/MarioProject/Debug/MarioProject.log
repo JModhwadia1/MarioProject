@@ -1,3 +1,22 @@
-﻿  MarioProject.cpp
-C:\Users\m014785l\Documents\GitHub\MarioProject\MarioProject\MarioProject\MarioProject.cpp(112): warning C4715: 'InitSDL': not all control paths return a value
-  MarioProject.vcxproj -> C:\Users\m014785l\Documents\GitHub\MarioProject\MarioProject\Debug\MarioProject.exe
+﻿  GameScreenLevel1.cpp
+C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Character.h(53,114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Character.h(53,90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\GameScreenLevel1.cpp(83,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\GameScreenLevel1.cpp(88,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\GameScreenLevel1.cpp(173,46): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\GameScreenLevel1.cpp(173,30): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\GameScreenLevel1.cpp(219,20): warning C4018: '<': signed/unsigned mismatch
+  GameScreenManager.cpp
+C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Character.h(53,114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Character.h(53,90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Texture2D.cpp
+C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Texture2D.cpp(32,41): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Texture2D.cpp(32,41): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Texture2D.cpp(32,55): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Texture2D.cpp(32,55): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  Generating Code...
+C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Texture2D.cpp(76): warning C4715: 'Texture2D::LoadFromFile': not all control paths return a value
+MarioProject.obj : error LNK2019: unresolved external symbol _TTF_Init referenced in function _SDL_main
+MarioProject.obj : error LNK2019: unresolved external symbol _TTF_Quit referenced in function "bool __cdecl CLoseSDL(void)" (?CLoseSDL@@YA_NXZ)
+TextRenderer.obj : error LNK2019: unresolved external symbol _TTF_OpenFont referenced in function "public: bool __thiscall TextRenderer::LoadFont(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,int,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct SDL_Color)" (?LoadFont@TextRenderer@@QAE_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@H0USDL_Color@@@Z)
+C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\Debug\MarioProject.exe : fatal error LNK1120: 3 unresolved externals
