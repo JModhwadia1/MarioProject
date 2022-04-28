@@ -1,14 +1,3 @@
-﻿  Character.cpp
-C:\Users\m014785l\Documents\GitHub\MarioProject\MarioProject\MarioProject\Character.h(53,114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\m014785l\Documents\GitHub\MarioProject\MarioProject\MarioProject\Character.h(53,90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  GameScreenLevel1.cpp
-C:\Users\m014785l\Documents\GitHub\MarioProject\MarioProject\MarioProject\Character.h(53,114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\m014785l\Documents\GitHub\MarioProject\MarioProject\MarioProject\Character.h(53,90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\m014785l\Documents\GitHub\MarioProject\MarioProject\MarioProject\GameScreenLevel1.cpp(83,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\m014785l\Documents\GitHub\MarioProject\MarioProject\MarioProject\GameScreenLevel1.cpp(88,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\m014785l\Documents\GitHub\MarioProject\MarioProject\MarioProject\GameScreenLevel1.cpp(168,32): error C2061: syntax error: identifier 'LoadFromFile'
-C:\Users\m014785l\Documents\GitHub\MarioProject\MarioProject\MarioProject\GameScreenLevel1.cpp(199,20): warning C4018: '<': signed/unsigned mismatch
-  GameScreenManager.cpp
-C:\Users\m014785l\Documents\GitHub\MarioProject\MarioProject\MarioProject\Character.h(53,114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\m014785l\Documents\GitHub\MarioProject\MarioProject\MarioProject\Character.h(53,90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  Generating Code...
+﻿  MarioProject.cpp
+C:\Users\m014785l\Documents\GitHub\MarioProject\MarioProject\MarioProject\MarioProject.cpp(112): warning C4715: 'InitSDL': not all control paths return a value
+  MarioProject.vcxproj -> C:\Users\m014785l\Documents\GitHub\MarioProject\MarioProject\Debug\MarioProject.exe

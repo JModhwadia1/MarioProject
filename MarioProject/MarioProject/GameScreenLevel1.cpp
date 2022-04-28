@@ -150,31 +150,48 @@ void GameScreenLevel1::SetLevelMap()
 	{
 		delete m_level_map;
 	}
+
+	mapSprites = new Texture2D(m_renderer);
+	if (!mapSprites->LoadFromFile("Images/Spritesheet.png"))
+	{
+		std::cout << "Failed to load background texture!" << std::endl;
+	}
+
 	//set the new one
 	m_level_map = new LevelMap(map);
 	for (int i = 0; i < MAP_HEIGHT; i++)
 	{
 		for (int j = 0; j < MAP_WIDTH; j++)
 		{
+
+			switch (map[i][j])
+			{
+			case 0:
+				//Tile::tex = new Texture2D::LoadFromFile("Images/Spritesheet.png")
+				Tile texture;
+				texture.tex = mapSprites;
+				texture.pos = new Rect2D(i * TILE_WIDTH, j * TILE_HEIGHT, TILE_WIDTH, TILE_HEIGHT)
+				texture.spriteSheetPos;
+				break;
+			case 1:
+				//Tile::tex = new Texture2D::LoadFromFile("Images/Spritesheet.png")
+				Tile texture;
+				texture.tex = mapSprites;
+				texture.pos;
+					texture.spriteSheetPos;
+				break;
+		
+
+		
+			default:
+				break;
+			}
 			
 		}
 
 	}
-	switch (map[MAP_HEIGHT][MAP_WIDTH])
-	{
-	case 0:
-		//Tile::tex = new Texture2D::LoadFromFile("Images/Spritesheet.png")
-		Tile texture;
-		texture.tex =  new Texture2D->LoadFromFile("Images/Spritesheet.png");
-		texture.pos;
-		texture.spriteSheetPos;
-		
-		
 
-		
-	default:
-		break;
-	}
+
 
 }
 void GameScreenLevel1::UpdatePOWBLOCK()

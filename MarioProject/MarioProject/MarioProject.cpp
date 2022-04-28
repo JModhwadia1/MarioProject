@@ -2,6 +2,7 @@
 #include <SDL.h>
 #include <SDL_image.h>
 #include<SDL_mixer.h>
+#include<SDL_ttf.h>
 #include "constant.h"
 #include "Texture2D.h"
 #include "Commons.h"
@@ -47,6 +48,14 @@ int main(int argc, char* args[])
 		{
 			Render();
 			quit = Update();
+		}
+	}
+	if (TTF_Init())
+	{
+		if (TTF_Init() == -1)
+		{
+			cout << "TTF  was not initialised. Error:" << TTF_GetError();
+			return false;
 		}
 	}
 	CLoseSDL();
@@ -118,6 +127,7 @@ bool CLoseSDL()
 	//Quit SDL subsystems
 	IMG_Quit();
 	SDL_Quit();
+	TTF_Quit();
 	return true;
 
 	//destroy the game screen manager
@@ -183,6 +193,7 @@ void LoadMusic(string path)
 		cout << "Failed to load music. Error " << Mix_GetError << endl;
 	}
 }
+
 
 
 

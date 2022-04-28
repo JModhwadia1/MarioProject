@@ -34,6 +34,7 @@ private:
 
 
 	Texture2D* m_background_texture;
+	Texture2D* mapSprites;
 	LevelMap* m_level_map;
 	PowBlock* m_pow_block;
 	bool SetUpLevel();
