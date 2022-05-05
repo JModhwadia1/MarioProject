@@ -5,9 +5,10 @@ CharacterKoopa::CharacterKoopa(SDL_Renderer* renderer, string imagePath, Vector2
 	m_facing_direction = start_facing;
 	m_position = start_position;
 	m_movement_speed = movementSpeed;
+	m_alive = true;
 
 	m_injured = false;
-	isAlive = true;
+	
 
 	m_single_sprite_w = m_texture->GetWidth() / 2;
 	m_single_sprite_h = m_texture->GetHeight();
@@ -19,6 +20,11 @@ CharacterKoopa::CharacterKoopa(SDL_Renderer* renderer, string imagePath, Vector2
 	}
 
 }
+CharacterKoopa::~CharacterKoopa()
+{
+}
+
+
 
 void CharacterKoopa::TakeDamage()
 {
@@ -72,7 +78,7 @@ void CharacterKoopa::Render()
 void CharacterKoopa::Update(float deltaTime, SDL_Event e)
 {
 	//USE THE CODE WITHIN THE BASE CLASS
-	Character::Update(deltaTime, e);
+	//Character::Update(deltaTime, e);
 	if (!m_injured)
 	{
 		//ENEMY IS NOT INJURED SO MOVE
@@ -102,12 +108,13 @@ void CharacterKoopa::Update(float deltaTime, SDL_Event e)
 			FlipRightwayUp();
 		}
 	}
-	cout << m_facing_direction << endl;
+	
 
 	if (m_position.x + m_single_sprite_w > SCREEN_WIDTH   || m_position.x < 0)
 	{
 		ChangeDirection();
 	}
+	Character::Update(deltaTime, e);
 	
 }
 

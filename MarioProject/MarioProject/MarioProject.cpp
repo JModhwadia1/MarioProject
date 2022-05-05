@@ -50,14 +50,14 @@ int main(int argc, char* args[])
 			quit = Update();
 		}
 	}
-	if (TTF_Init())
+	/*if (TTF_Init())
 	{
 		if (TTF_Init() == -1)
 		{
 			cout << "TTF  was not initialised. Error:" << TTF_GetError();
 			return false;
 		}
-	}
+	}*/
 	CLoseSDL();
 	
 	return 0;
@@ -116,6 +116,7 @@ bool InitSDL()
 			cout << "Window was not created. Error: " << SDL_GetError();
 			return false;
 		}
+		
 	}
 }
 bool CLoseSDL()
@@ -127,7 +128,7 @@ bool CLoseSDL()
 	//Quit SDL subsystems
 	IMG_Quit();
 	SDL_Quit();
-	TTF_Quit();
+	//TTF_Quit();
 	return true;
 
 	//destroy the game screen manager

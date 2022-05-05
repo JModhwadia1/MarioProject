@@ -31,6 +31,21 @@ struct Rect2D
 		this->height = height;
 	}
 };
+struct Circle2D
+{
+	float x;
+	float y;
+	float radius;
+
+	Circle2D(float x_pos, float y_pos, float radius)
+	{
+		x = x_pos;
+		y = y_pos;
+		this->radius = radius;
+	}
+
+
+};
 enum SCREENS
 {
 	SCREEN_INTRO,

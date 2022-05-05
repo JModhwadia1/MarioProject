@@ -21,6 +21,7 @@ protected:
 	bool m_jumping;
 	bool m_can_jump;
 	float m_jump_force;
+	bool m_alive;
 	
 	FACING m_facing_direction;
 
@@ -45,12 +46,13 @@ public:
 	Vector2D GetPosition();
 	bool IsJumping() { return m_jumping;  }
 	void CancelJump();
-
+	bool GetAlive() { return m_alive; }
+	void SetAlive(bool isAlive) { m_alive = isAlive; }
 	
 
 	//collision functions
 	float GetCollisionRadius();
-	Rect2D GetCollisionBox() { return Rect2D(m_position.x, m_position.y, m_texture->GetWidth(), m_texture->GetHeight());  }
+	Rect2D GetCollisionBox();
 	
 };
 #endif 

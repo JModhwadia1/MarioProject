@@ -178,7 +178,7 @@ void GameScreenLevel1::SetLevelMap()
 				Tile powBlock;
 				powBlock.tex = mapSprites;
 				powBlock.pos = new Rect2D(i * TILE_WIDTH, j * TILE_WIDTH, TILE_WIDTH, TILE_HEIGHT);
-				powBlock.spriteSheetPos = new Rect2D()
+				//powBlock.spriteSheetPos = new Rect2D()
 				break;
 		
 
@@ -235,7 +235,10 @@ void GameScreenLevel1::UpdateEnemies(float deltaTime, SDL_Event e)
 			{
 				//is the enemy off screen to left / right
 				if (m_enemies[i]->GetPosition().x < (float)(-m_enemies[i]->GetCollisionBox().width * 0.5f) || m_enemies[i]->GetPosition().x > SCREEN_WIDTH - (float)(m_enemies[i]->GetCollisionBox().width * 0.55f))
+				{
 					m_enemies[i]->SetAlive(false);
+				}
+					
 			}
 			//now do the update
 			m_enemies[i]->Update(deltaTime, e);
@@ -255,7 +258,10 @@ void GameScreenLevel1::UpdateEnemies(float deltaTime, SDL_Event e)
 					}
 					else
 					{
-						//kill mario
+						if (mario->GetAlive())
+						{
+							mario->SetAlive(false);
+						}
 					}
 				}
 			}
@@ -290,5 +296,16 @@ void GameScreenLevel1::UpdateCoins(float deltaTime, SDL_Event e)
 	for (unsigned int i = 0; i < m_coins.size(); i++)
 	{
 		m_coins[i]->Update(deltaTime, e);
+
+		if (Collisions::Instance()->Box(m_coins[i]->GetCollisionBox(), mario->GetCollisionBox()))
+		{
+			m_coins[i]->SetAlive(false);
+			cout << "coin is dead" << endl;
+		}
+		if (Collisions::Instance()->Box(m_coins[i]->GetCollisionBox(), luigi->GetCollisionBox()))
+		{
+			m_coins[i]->SetAlive(false);
+		}
+		
 	}
 }

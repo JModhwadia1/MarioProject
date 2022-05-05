@@ -8,7 +8,7 @@ Character::Character(SDL_Renderer* renderer, string imagePath, Vector2D start_po
 	m_moving_left = false;
 	m_moving_right = false;
 	m_current_level_map = map;
-	
+	m_alive = true;
 	//load texture
 	m_texture = new Texture2D(m_renderer);
 	if (!m_texture->LoadFromFile(imagePath))
@@ -19,6 +19,7 @@ Character::Character(SDL_Renderer* renderer, string imagePath, Vector2D start_po
 
 	//set collsion radiius
 	m_collision_radius = 15.0f;
+
 }
 
 Character::~Character()
@@ -109,6 +110,10 @@ void Character::MoveLeft(float deltaTime)
 	m_facing_direction = FACING_LEFT;
 	m_position.x -= MOVEMENTSPEED * deltaTime;
 }
+Rect2D Character::GetCollisionBox()
+{
+	return Rect2D(m_position.x, m_position.y, m_texture->GetWidth(), m_texture->GetHeight());
+}
 
 void Character::MoveRight(float deltaTime)
 {
@@ -142,6 +147,7 @@ void Character::CancelJump()
 {
 	m_jumping = false;
 }
+
 	
 
 

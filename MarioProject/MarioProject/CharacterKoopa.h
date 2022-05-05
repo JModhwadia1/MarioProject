@@ -14,8 +14,8 @@ public:
 	void Jump();
 	void Render()override;
 
-	bool GetAlive() { return isAlive; }
-	void SetAlive(bool alive) { isAlive = false; }
+	bool GetAlive() { return m_alive; }
+	void SetAlive(bool isAlive) { m_alive = isAlive; }
 
 	void Update(float deltaTime, SDL_Event e)override;
 	bool GetIsInjured() { return m_injured;};
@@ -27,7 +27,7 @@ private:
 	bool m_injured_time;
 
 	float m_movement_speed;
-	bool isAlive;
+	bool m_alive;
 
 	void FlipRightwayUp();
 	void ChangeDirection();
