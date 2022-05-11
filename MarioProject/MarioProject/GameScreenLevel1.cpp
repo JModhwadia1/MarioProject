@@ -161,33 +161,33 @@ void GameScreenLevel1::SetLevelMap()
 	m_level_map = new LevelMap(map);
 	for (int i = 0; i < MAP_HEIGHT; i++)
 	{
-		for (int j = 0; j < MAP_WIDTH; j++)
-		{
+		//for (int j = 0; j < MAP_WIDTH; j++)
+		//{
 
-			switch (map[i][j])
-			{
-			case 1:
-				//Tile::tex = new Texture2D::LoadFromFile("Images/Spritesheet.png")
-				Tile floor;
-				floor.tex = mapSprites;
-				floor.pos = new Rect2D(i * TILE_WIDTH, j * TILE_HEIGHT, TILE_WIDTH, TILE_HEIGHT);
-				floor.spriteSheetPos = new Rect2D( 16, 296,TILE_WIDTH,TILE_HEIGHT );
-				break;
-			case 2:
-				//Tile::tex = new Texture2D::LoadFromFile("Images/Spritesheet.png")
-				Tile powBlock;
-				powBlock.tex = mapSprites;
-				powBlock.pos = new Rect2D(i * TILE_WIDTH, j * TILE_WIDTH, TILE_WIDTH, TILE_HEIGHT);
-				powBlock.spriteSheetPos = new Rect2D()
-				break;
-		
+		//	switch (map[i][j])
+		//	{
+		//	case 1:
+		//		//Tile::tex = new Texture2D::LoadFromFile("Images/Spritesheet.png")
+		//		Tile floor;
+		//		floor.tex = mapSprites;
+		//		floor.pos = new Rect2D(i * TILE_WIDTH, j * TILE_HEIGHT, TILE_WIDTH, TILE_HEIGHT);
+		//		floor.spriteSheetPos = new Rect2D( 16, 296,TILE_WIDTH,TILE_HEIGHT );
+		//		break;
+		//	case 2:
+		//		//Tile::tex = new Texture2D::LoadFromFile("Images/Spritesheet.png")
+		//		Tile powBlock;
+		//		powBlock.tex = mapSprites;
+		//		powBlock.pos = new Rect2D(i * TILE_WIDTH, j * TILE_WIDTH, TILE_WIDTH, TILE_HEIGHT);
+		//		powBlock.spriteSheetPos = new Rect2D()
+		//		break;
+		//
 
-		
-			default:
-				break;
-			}
-			
-		}
+		//
+		//	default:
+		//		break;
+		//	}
+		//	
+		//}
 
 	}
 

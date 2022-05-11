@@ -1,6 +1,7 @@
 #include "GameScreenManager.h"
 #include "GameScreen.h"
 #include "GameScreenLevel1.h"
+#include "GameScreenMenu.h"
 
 
 GameScreenManager::GameScreenManager(SDL_Renderer* renderer, SCREENS startScreen)
@@ -32,9 +33,18 @@ void GameScreenManager::ChangeScreen(SCREENS new_screen)
 		delete m_current_screen;
 	}
 	//decare the pointer
+	GameScreenMenu* tempScreen0;
 	GameScreenLevel1* tempScreen;
+
+	
+	
 	switch (new_screen)
 	{
+	case SCREEN_MENU:
+		tempScreen0 = new GameScreenMenu(m_renderer);
+		m_current_screen = (GameScreen*)tempScreen0;
+		tempScreen0 = nullptr;
+		break;
 	case SCREEN_LEVEL1:
 		tempScreen = new GameScreenLevel1(m_renderer);
 		m_current_screen = (GameScreen*)tempScreen;

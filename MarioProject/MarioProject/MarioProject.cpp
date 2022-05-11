@@ -38,7 +38,8 @@ int main(int argc, char* args[])
 		{
 			Mix_PlayMusic(g_music, -1);
 		}
-		game_screen_manager = new GameScreenManager(g_renderer, SCREEN_LEVEL1);
+		game_screen_manager = new GameScreenManager(g_renderer, SCREEN_MENU);
+		game_screen_manager = new GameScreenManager(g_renderer, SCREEN_MENU);
 
 		//set the time
 		g_old_time = SDL_GetTicks();
@@ -50,14 +51,7 @@ int main(int argc, char* args[])
 			quit = Update();
 		}
 	}
-	if (TTF_Init())
-	{
-		if (TTF_Init() == -1)
-		{
-			cout << "TTF  was not initialised. Error:" << TTF_GetError();
-			return false;
-		}
-	}
+	
 	CLoseSDL();
 	
 	return 0;
@@ -127,7 +121,7 @@ bool CLoseSDL()
 	//Quit SDL subsystems
 	IMG_Quit();
 	SDL_Quit();
-	TTF_Quit();
+	
 	return true;
 
 	//destroy the game screen manager
@@ -156,6 +150,12 @@ bool Update()
 	switch (e.type)
 	{
 		//click the 'x' to quit
+	case SDLK_0:
+		game_screen_manager->ChangeScreen(SCREEN_MENU);
+		break;
+	case SDLK_1:
+		game_screen_manager->ChangeScreen(SCREEN_LEVEL1);
+		break;
 	case SDL_QUIT:
 			return true;
 			break;
@@ -171,6 +171,7 @@ bool Update()
 	game_screen_manager->Update((float)(new_time - g_old_time) / 1000.0f, e);
 	g_old_time = new_time;
 	return false;
+	
 }
 void Render()
 {
