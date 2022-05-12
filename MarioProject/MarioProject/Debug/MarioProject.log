@@ -1,4 +1,3 @@
-﻿  GameScreenManager.cpp
-C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Character.h(53,114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\Character.h(53,90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+﻿  MarioProject.cpp
+C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\MarioProject\MarioProject.cpp(114): warning C4715: 'InitSDL': not all control paths return a value
   MarioProject.vcxproj -> C:\Users\jayes\Documents\University\Games Engine Creation\MarioProject\MarioProject\Debug\MarioProject.exe

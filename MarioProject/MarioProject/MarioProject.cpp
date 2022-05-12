@@ -38,8 +38,8 @@ int main(int argc, char* args[])
 		{
 			Mix_PlayMusic(g_music, -1);
 		}
-		game_screen_manager = new GameScreenManager(g_renderer, SCREEN_MENU);
-		game_screen_manager = new GameScreenManager(g_renderer, SCREEN_MENU);
+		game_screen_manager = new GameScreenManager(g_renderer, SCREEN_LEVEL1);
+		
 
 		//set the time
 		g_old_time = SDL_GetTicks();
