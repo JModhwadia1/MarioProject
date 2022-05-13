@@ -1,3 +1,16 @@
-﻿  MarioProject.cpp
-C:\Users\jayes\Documents\University\Games Engine Creation\Semester 2\MarioProject\MarioProject\MarioProject.cpp(61): warning C4715: 'InitSDL': not all control paths return a value
-  MarioProject.vcxproj -> C:\Users\jayes\Documents\University\Games Engine Creation\Semester 2\MarioProject\Debug\MarioProject.exe
+﻿  CharacterCoin.cpp
+D:\Mario\MarioProject\MarioProject\Character.h(56,114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Mario\MarioProject\MarioProject\Character.h(56,90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Mario\MarioProject\MarioProject\CharacterCoin.cpp(6,44): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Mario\MarioProject\MarioProject\CharacterCoin.cpp(7,42): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Mario\MarioProject\MarioProject\CharacterCoin.cpp(27,51): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+D:\Mario\MarioProject\MarioProject\CharacterCoin.cpp(27,51): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\Mario\MarioProject\MarioProject\CharacterCoin.cpp(27,73): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+D:\Mario\MarioProject\MarioProject\CharacterCoin.cpp(27,73): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\Mario\MarioProject\MarioProject\CharacterCoin.cpp(27,92): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+D:\Mario\MarioProject\MarioProject\CharacterCoin.cpp(27,92): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\Mario\MarioProject\MarioProject\CharacterCoin.cpp(30,66): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+D:\Mario\MarioProject\MarioProject\CharacterCoin.cpp(30,66): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\Mario\MarioProject\MarioProject\CharacterCoin.cpp(30,85): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+D:\Mario\MarioProject\MarioProject\CharacterCoin.cpp(30,85): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  MarioProject.vcxproj -> D:\Mario\MarioProject\Debug\MarioProject.exe
