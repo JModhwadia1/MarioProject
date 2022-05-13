@@ -44,4 +44,6 @@ enum FACING
 {
 	FACING_LEFT,
 	FACING_RIGHT,
+	
 };
+
